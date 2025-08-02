@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nirja Creative Corner | Handcrafted Maharashtrian Jewels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Handcrafted Maharashtrian jewelry that blends tradition with modern style. Necklaces, earrings, naths, bangles, and custom pieces for Indian women.">
+  <meta name="keywords" content="Maharashtrian jewelry, handmade jewelry, traditional Indian jewelry, Nirja Creative Corner">
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="http://localhost:8088/">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Marathi:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-gold: #D4AF37;
+      --deep-maroon: #8B0000;
+      --saffron: #FF9933;
+      --royal-purple: #663399;
+      --warm-cream: #FFF8DC;
+      --soft-peach: #FFEAA7;
+      --emerald-green: #00B894;
+      --dark-brown: #3E2723;
+      --light-bg: #FFFEF7;
+      --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+      --gradient-maroon: linear-gradient(135deg, #8B0000, #DC143C);
+      --shadow-soft: 0 8px 32px rgba(0,0,0,0.1);
+      --shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
+      --border-radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
+    html { 
+      scroll-behavior: smooth; 
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light-bg);
+      color: var(--dark-brown);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { 
+      color: var(--primary-gold); 
+      text-decoration: none; 
+      transition: var(--transition);
+    }
+    a:hover { 
+      color: var(--saffron);
+      transform: translateY(-1px);
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-brown);
+      font-weight: 700;
+    }
+    
+    /* Language Toggle */
+    .language-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      background: var(--gradient-gold);
+      border-radius: 25px;
+      padding: 8px;
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .language-toggle button {
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+    
+    .language-toggle button.active {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .language-toggle button:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('assets/images/necklace1.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paisley" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M10,2 Q15,5 12,10 Q8,15 5,10 Q2,5 10,2" fill="rgba(255,215,0,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23paisley)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(212,175,55,0.1), transparent);
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 2rem;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    header h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 900;
+    }
+    
+    header .subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      margin-bottom: 2rem;
+      font-weight: 300;
+      opacity: 0.95;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    
+    .header-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      z-index: 3;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 10px 15px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .logo-container img {
+      height: 50px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+      transition: var(--transition);
+    }
+    
+    .logo-container:hover img {
+      transform: scale(1.05);
+    }
+    
+    nav {
+      position: absolute;
+      top: 25px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      z-index: 2;
+      padding: 0 2rem;
+    }
+    
+    nav a {
+      color: #fff;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: var(--transition);
+      padding: 12px 20px;
+      border-radius: 25px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-gold);
+      transition: var(--transition);
+      z-index: -1;
+    }
+    
+    nav a:hover::before {
+      left: 0;
+    }
+    
+    nav a:hover {
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+    .fixed-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--maroon);
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+    .fixed-nav.visible {
+      transform: translateY(0);
+    }
+
+    .container {
+      max-width:1200px;
+      margin:2rem auto;
+      padding:0 1rem;
+    }
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:1rem;
+      margin-bottom:2rem;
+    }
+    .contact-item {
+      background:#fff;
+      border-radius:8px;
+      padding:1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      text-align:center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .contact-item span {
+      display:block;
+      font-size:1.1rem;
+      margin:0.3rem 0;
+    }
+    .contact-item a {
+      font-weight:500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .contact-item img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding: 0 1rem;
+    }
+    
+    .product-card {
+      background: #fff;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+      border: 1px solid rgba(212,175,55,0.1);
+    }
+    
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-gold);
+      opacity: 0;
+      transition: var(--transition);
+      z-index: 1;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .product-card:hover::before {
+      opacity: 0.05;
+    }
+    
+    .product-image {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .product-card:hover img {
+      transform: scale(1.1);
+    }
+    
+    .product-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      opacity: 0;
+      transition: var(--transition);
+      z-index: 2;
+    }
+    
+    .product-card:hover .product-overlay {
+      opacity: 1;
+    }
+    
+    .product-overlay .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .product-card .info {
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      background: white;
+    }
+    
+    .product-card h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
+      color: var(--dark-brown);
+    }
+    
+    .product-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .product-price {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-gold);
+      margin-bottom: 1rem;
+    }
+    
+    .product-actions {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .product-actions .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background: var(--gradient-maroon);
+      color: white;
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary-gold);
+      border: 2px solid var(--primary-gold);
+    }
+    
+    .btn-primary:hover, .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gradient-maroon);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-gold);
+      transition: var(--transition);
+      z-index: -1;
+    }
+    
+    .cta-button:hover::before {
+      left: 0;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .cta-button:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+    
+    .cta-button.secondary {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    
+    .cta-button.secondary::before {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    .cta-button i {
+      font-size: 1.1rem;
+    }
+    
+    .promo-banner {
+      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+    .promo-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.2)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .about-section {
+      background-color: var(--cream);
+      padding: 3rem 0;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    .about-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #reviews {
+      background:#fffbe6;
+      padding:3rem 0;
+    }
+    #reviews .review-list {
+      max-width:800px;
+      margin:0 auto;
+    }
+    #reviews .review {
+      margin-bottom:2rem;
+      padding-bottom:1rem;
+      border-bottom:1px solid #f4e2b2;
+    }
+    #reviews .stars {
+      color:#ffd700;
+      font-size:1.4rem;
+    }
+    #reviews p {
+      font-style: italic;
+      margin:0.5rem 0;
+    }
+    #reviews small {
+      color:#555;
+    }
+
+    footer {
+      text-align:center;
+      padding:2rem 0;
+      font-size:0.9rem;
+      background: var(--maroon);
+      color: #fff;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-section h3 {
+      color: var(--light-gold);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+      color: var(--light-gold);
+      opacity: 1;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .social-icons a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background-color: var(--light-gold);
+      transform: translateY(-3px);
+    }
+    
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) invert(1);
+    }
+    
+    .copyright {
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 15px; }
+      header h1 { font-size:2rem; }
+      header p { font-size:1rem; }
+      h2 { font-size: 1.5rem; }
+      .product-card h3 { font-size: 1.1rem; }
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(0,0,0,0.5);
+        padding: 0.5rem;
+      }
+      .logo-container {
+        top: 10px;
+        left: 10px;
+      }
+      .logo-container img {
+        height: 40px;
+      }
+      .about-content {
+        flex-direction: column;
+      }
+      .footer-section {
+        flex: 100%;
+        text-align: center;
+      }
+    }
+    
+    /* Instagram Feed Styling */
+    .instagram-feed {
+      margin: 3rem 0;
+    }
+    .instagram-feed h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .instagram-item {
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    .instagram-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .instagram-item:hover img {
+      transform: scale(1.05);
+    }
+    .instagram-item::after {
+      content: '@nirjacreativecorner';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .instagram-item:hover::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="language-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="hi">हिं</button>
+    <button class="lang-btn" data-lang="mr">मर</button>
+  </div>
+
+  <div class="fixed-nav">
+    <nav>
+      <a href="#products" data-en="Collection" data-hi="संग्रह" data-mr="संग्रह">Collection</a>
+      <a href="#about" data-en="About Us" data-hi="हमारे बारे में" data-mr="आमच्याबद्दल">About Us</a>
+      <a href="#contact" data-en="Contact" data-hi="संपर्क" data-mr="संपर्क">Contact</a>
+      <a href="#reviews" data-en="Reviews" data-hi="समीक्षा" data-mr="पुनरावलोकने">Reviews</a>
+    </nav>
+  </div>
+
+  <div class="promo-banner">
+    <span data-en="🎉 Festive Season Special: 10% off on all orders above ₹2000! Use code: FESTIVE10 🎉" 
+          data-hi="🎉 त्योहारी सीज़न स्पेशल: ₹2000 से अधिक के सभी ऑर्डर पर 10% छूट! कोड का उपयोग करें: FESTIVE10 🎉" 
+          data-mr="🎉 सणाच्या हंगामातील विशेष: ₹2000 पेक्षा जास्त ऑर्डरवर 10% सूट! कोड वापरा: FESTIVE10 🎉">
+      🎉 Festive Season Special: 10% off on all orders above ₹2000! Use code: FESTIVE10 🎉
+    </span>
+  </div>
+
+  <header>
+    <div class="logo-container">
+      <img src="/assets/images/Nirja-Logo.png" alt="Nirja Creative Corner Logo">
+    </div>
+    <div class="header-content">
+
+      <h1 data-en="Nirja Creative Corner" data-hi="निर्जा क्रिएटिव कॉर्नर" data-mr="निर्जा क्रिएटिव्ह कॉर्नर">Nirja Creative Corner</h1>
+      <p class="subtitle" data-en="Handcrafted Maharashtrian Jewellery | Tradition Meets Style" 
+         data-hi="हस्तनिर्मित महाराष्ट्रीय आभूषण | परंपरा मिलती है शैली से" 
+         data-mr="हस्तकलेचे महाराष्ट्रीय दागिने | परंपरा भेटते शैलीला">Handcrafted Maharashtrian Jewellery | Tradition Meets Style</p>
+      
+      <div class="header-cta">
+        <a href="https://wa.me/918898323336" class="cta-button">
+          <i class="fab fa-whatsapp"></i>
+          <span data-en="Order on WhatsApp" data-hi="WhatsApp पर ऑर्डर करें" data-mr="WhatsApp वर ऑर्डर करा">Order on WhatsApp</span>
+        </a>
+        <a href="#products" class="cta-button secondary">
+          <i class="fas fa-gem"></i>
+          <span data-en="Explore Collection" data-hi="संग्रह देखें" data-mr="संग्रह पहा">Explore Collection</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-section" id="about">
+      <div class="container">
+        <h2 style="text-align:center; margin-bottom:1.5rem;">About Nirja Creative Corner</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Nirja Creative Corner was born from a passion for preserving Maharashtra's rich cultural heritage through exquisite handcrafted jewelry. Each piece we create is a blend of traditional craftsmanship and contemporary design, making our jewelry perfect for both everyday wear and special occasions.</p>
+            <p style="margin-top:1rem;">Our artisans meticulously handcraft each piece using traditional techniques passed down through generations, ensuring that every necklace, earring, and ornament carries the essence of Maharashtrian artistry while appealing to the modern Indian woman.</p>
+          </div>
+          <div class="about-image">
+            <img src="/assets/images/WhatsApp Image 2024-12-24 at 1.05.55 PM.jpeg" alt="Nirja Creative Corner Workshop" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" id="contact">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span>WhatsApp</span>
+          <a href="https://wa.me/918898323336" target="_blank">
+            <img src="/assets/images/WhatsApp-icon.png" alt="WhatsApp icon">
+            +91 88983 23336
+          </a>
+        </div>
+        <div class="contact-item">
+          <span>Email</span>
+          <a href="mailto:nirjacreativecorner@gmail.com">
+            <img src="/assets/images/email-icon.png" alt="Email icon">
+            nirjacreativecorner@gmail.com
+          </a>
+        </div>
+        <div class="contact-item">
+          <span>Instagram</span>
+          <a href="https://instagram.com/nirjacreativecorner" target="_blank">
+            <img src="/assets/images/instagram-icon.webp" alt="Instagram icon">
+            @nirjacreativecorner
+          </a>
+        </div>
+        <div class="contact-item">
+          <span>Facebook</span>
+          <a href="https://facebook.com/profile.php?id=61568128246789" target="_blank">
+            <img src="/assets/images/facebook-icon.png" alt="Facebook icon">
+            Our Facebook Page
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="products">
+      <h2 style="text-align:center; margin-bottom:3rem;" data-en="Our Exquisite Collection" data-hi="हमारा विशेष संग्रह" data-mr="आमचा विशेष संग्रह">Our Exquisite Collection</h2>
+      <div class="products">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/necklace1.jpg" loading="lazy" alt="Powada Necklace – Maharashtrian traditional pearl-bead style">
+            <div class="product-overlay">
+              <button class="btn btn-primary" onclick="openWhatsApp('Powada Necklace')">Quick Order</button>
+              <button class="btn btn-secondary" onclick="viewProduct('necklace1')">View Details</button>
+            </div>
+          </div>
+          <div class="info">
+            <h3 data-en="Powada Necklace" data-hi="पोवाडा हार" data-mr="पोवाडा हार">Powada Necklace</h3>
+            <p data-en="Elegant pearl-bead design with antique finish, perfect for traditional occasions." 
+               data-hi="पारंपरिक अवसरों के लिए एंटीक फिनिश के साथ सुंदर मोती-मनका डिज़ाइन।" 
+               data-mr="पारंपारिक प्रसंगांसाठी अँटीक फिनिशसह सुंदर मोती-मणी डिझाइन।">Elegant pearl-bead design with antique finish, perfect for traditional occasions.</p>
+            <div class="product-price">₹2,500 - ₹4,000</div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="openWhatsApp('Powada Necklace')"><i class="fab fa-whatsapp"></i> Order Now</button>
+              <button class="btn btn-secondary" onclick="customizeProduct('Powada Necklace')"><i class="fas fa-palette"></i> Customize</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/earrings1.jpg" loading="lazy" alt="Aabha Earrings – Gold-tone floral festive earrings">
+            <div class="product-overlay">
+              <button class="btn btn-primary" onclick="openWhatsApp('Aabha Earrings')">Quick Order</button>
+              <button class="btn btn-secondary" onclick="viewProduct('earrings1')">View Details</button>
+            </div>
+          </div>
+          <div class="info">
+            <h3 data-en="Aabha Earrings" data-hi="आभा कानों के झुमके" data-mr="आभा कानातले">Aabha Earrings</h3>
+            <p data-en="Floral motif in gold-tone, perfect for festive wear and special celebrations." 
+               data-hi="सोने के टोन में फूलों का मोटिफ, त्योहारी पहनावे और विशेष समारोहों के लिए बिल्कुल सही।" 
+               data-mr="सोन्याच्या टोनमध्ये फुलांचा मोटिफ, सणासुदीच्या पोशाखासाठी आणि विशेष समारंभांसाठी योग्य।">Floral motif in gold-tone, perfect for festive wear and special celebrations.</p>
+            <div class="product-price">₹1,200 - ₹2,500</div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="openWhatsApp('Aabha Earrings')"><i class="fab fa-whatsapp"></i> Order Now</button>
+              <button class="btn btn-secondary" onclick="customizeProduct('Aabha Earrings')"><i class="fas fa-palette"></i> Customize</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/mangalsutra1.jpg" loading="lazy" alt="Custom Mangalsutra – Personalized pearls and beads">
+            <div class="product-overlay">
+              <button class="btn btn-primary" onclick="openWhatsApp('Custom Mangalsutra')">Quick Order</button>
+              <button class="btn btn-secondary" onclick="viewProduct('mangalsutra1')">View Details</button>
+            </div>
+          </div>
+          <div class="info">
+            <h3 data-en="Custom Mangalsutra" data-hi="कस्टम मंगलसूत्र" data-mr="कस्टम मंगळसूत्र">Custom Mangalsutra</h3>
+            <p data-en="Personalized design with your choice of pearls, beads, and traditional motifs." 
+               data-hi="मोती, मनके और पारंपरिक मोटिफ्स की आपकी पसंद के साथ व्यक्तिगत डिज़ाइन।" 
+               data-mr="मोती, मणी आणि पारंपारिक मोटिफ्सची तुमची निवड असलेली वैयक्तिक डिझाइन।">Personalized design with your choice of pearls, beads, and traditional motifs.</p>
+            <div class="product-price">₹3,000 - ₹8,000</div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="openWhatsApp('Custom Mangalsutra')"><i class="fab fa-whatsapp"></i> Order Now</button>
+              <button class="btn btn-secondary" onclick="customizeProduct('Custom Mangalsutra')"><i class="fas fa-palette"></i> Customize</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/product-1.png" loading="lazy" alt="Traditional Thushi – Classic Maharashtrian necklace">
+            <div class="product-overlay">
+              <button class="btn btn-primary" onclick="openWhatsApp('Traditional Thushi')">Quick Order</button>
+              <button class="btn btn-secondary" onclick="viewProduct('thushi1')">View Details</button>
+            </div>
+          </div>
+          <div class="info">
+            <h3 data-en="Traditional Thushi" data-hi="पारंपरिक ठुशी" data-mr="पारंपारिक ठुशी">Traditional Thushi</h3>
+            <p data-en="Classic design embodying Maharashtrian heritage with intricate craftsmanship." 
+               data-hi="जटिल शिल्प कौशल के साथ महाराष्ट्रीय विरासत को दर्शाने वाला क्लासिक डिज़ाइन।" 
+               data-mr="गुंतागुंतीच्या कारागिरीसह महाराष्ट्रीय वारसा दर्शविणारी क्लासिक डिझाइन।">Classic design embodying Maharashtrian heritage with intricate craftsmanship.</p>
+            <div class="product-price">₹4,500 - ₹7,500</div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="openWhatsApp('Traditional Thushi')"><i class="fab fa-whatsapp"></i> Order Now</button>
+              <button class="btn btn-secondary" onclick="customizeProduct('Traditional Thushi')"><i class="fas fa-palette"></i> Customize</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/product-2.png" loading="lazy" alt="Kolhapuri Saaj – Intricate gold-plated set">
+            <div class="product-overlay">
+              <button class="btn btn-primary" onclick="openWhatsApp('Kolhapuri Saaj')">Quick Order</button>
+              <button class="btn btn-secondary" onclick="viewProduct('saaj1')">View Details</button>
+            </div>
+          </div>
+          <div class="info">
+            <h3 data-en="Kolhapuri Saaj" data-hi="कोल्हापुरी साज" data-mr="कोल्हापुरी साज">Kolhapuri Saaj</h3>
+            <p data-en="Intricate gold-plated jewellery set for special occasions and weddings." 
+               data-hi="विशेष अवसरों और शादियों के लिए जटिल सोने की परत वाला आभूषण सेट।" 
+               data-mr="विशेष प्रसंग आणि लग्नांसाठी गुंतागुंतीचा सोन्याचा मुलामा असलेला दागिन्यांचा संच।">Intricate gold-plated jewellery set for special occasions and weddings.</p>
+            <div class="product-price">₹6,000 - ₹12,000</div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="openWhatsApp('Kolhapuri Saaj')"><i class="fab fa-whatsapp"></i> Order Now</button>
+              <button class="btn btn-secondary" onclick="customizeProduct('Kolhapuri Saaj')"><i class="fas fa-palette"></i> Customize</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/product-3.png" loading="lazy" alt="Pearl Rani Haar – Royal necklace with pearls">
+            <div class="product-overlay">
+              <button class="btn btn-primary" onclick="openWhatsApp('Pearl Rani Haar')">Quick Order</button>
+              <button class="btn btn-secondary" onclick="viewProduct('ranihaar1')">View Details</button>
+            </div>
+          </div>
+          <div class="info">
+            <h3 data-en="Pearl Rani Haar" data-hi="मोती रानी हार" data-mr="मोती राणी हार">Pearl Rani Haar</h3>
+            <p data-en="Royal necklace adorned with fine pearls and beads, fit for a queen." 
+               data-hi="बेहतरीन मोती और मनकों से सजा शाही हार, एक रानी के लिए उपयुक्त।" 
+               data-mr="उत्कृष्ट मोती आणि मण्यांनी सजवलेला राजेशाही हार, राणीसाठी योग्य।">Royal necklace adorned with fine pearls and beads, fit for a queen.</p>
+            <div class="product-price">₹8,000 - ₹15,000</div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="openWhatsApp('Pearl Rani Haar')"><i class="fab fa-whatsapp"></i> Order Now</button>
+              <button class="btn btn-secondary" onclick="customizeProduct('Pearl Rani Haar')"><i class="fas fa-palette"></i> Customize</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="reviews">
+      <div class="container review-list">
+        <h2 style="text-align:center; margin-bottom:1.5rem;">What Our Customers Say</h2>
+        <div class="review">
+          <span class="stars">★★★★★</span>
+          <p>“Absolutely beautiful jewellery! Fast service and lovely packaging.”</p>
+          <small>– Priya K., Google Review</small>
+        </div>
+        <div class="review">
+          <span class="stars">★★★★★</span>
+          <p>“Loved the custom mangalsutra. Highly recommended!”</p>
+          <small>– Aniket S., Google Review</small>
+        </div>
+        <div class="review">
+          <span class="stars">★★★★★</span>
+          <p>“Unique designs and great experience ordering from Nirja Creative Corner.”</p>
+          <small>– Ruchita M., Google Review</small>
+        </div>
+        <div style="text-align:center;">
+          <a href="https://www.google.com/search?q=Nirja+Creative+Corner&ludocid=YOUR_BUSINESS_ID" class="cta-button" target="_blank">Read More Reviews</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="container instagram-feed">
+    <h2>Follow Us on Instagram</h2>
+    <div class="instagram-grid">
+      <a href="https://instagram.com/nirjacreativecorner" target="_blank" class="instagram-item">
+        <img src="/assets/images/necklace1.jpg" alt="Instagram post" loading="lazy">
+      </a>
+      <a href="https://instagram.com/nirjacreativecorner" target="_blank" class="instagram-item">
+        <img src="/assets/images/earrings1.jpg" alt="Instagram post" loading="lazy">
+      </a>
+      <a href="https://instagram.com/nirjacreativecorner" target="_blank" class="instagram-item">
+        <img src="/assets/images/mangalsutra1.jpg" alt="Instagram post" loading="lazy">
+      </a>
+      <a href="https://instagram.com/nirjacreativecorner" target="_blank" class="instagram-item">
+        <img src="/assets/images/product-1.png" alt="Instagram post" loading="lazy">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#products">Our Collection</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>WhatsApp: +91 88983 23336</li>
+          <li>Email: nirjacreativecorner@gmail.com</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://instagram.com/nirjacreativecorner" target="_blank">
+            <img src="/assets/images/instagram-icon.webp" alt="Instagram">
+          </a>
+          <a href="https://facebook.com/profile.php?id=61568128246789" target="_blank">
+            <img src="/assets/images/facebook-icon.png" alt="Facebook">
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <img src="/assets/images/youtube-icon.jpg" alt="YouTube">
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      &copy; 2025 Nirja Creative Corner. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Language Toggle Functionality
+    let currentLanguage = 'en';
+    
+    function switchLanguage(lang) {
+      currentLanguage = lang;
+      
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) {
+          btn.classList.add('active');
+        }
+      });
+      
+      // Update all elements with language data
+      document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+        const text = element.getAttribute('data-' + lang);
+        if (text) {
+          element.textContent = text;
+        }
+      });
+      
+      // Store preference
+      localStorage.setItem('preferredLanguage', lang);
+    }
+    
+    // WhatsApp Integration
+    function openWhatsApp(productName) {
+      const phoneNumber = '918898323336';
+      const message = encodeURIComponent(`Hi! I'm interested in the ${productName}. Could you please share more details and pricing?`);
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    }
+    
+    function customizeProduct(productName) {
+      const phoneNumber = '918898323336';
+      const message = encodeURIComponent(`Hi! I would like to customize the ${productName}. Could you help me with customization options and pricing?`);
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    }
+    
+    function viewProduct(productId) {
+      // This could open a modal or navigate to a detailed product page
+      const phoneNumber = '918898323336';
+      const message = encodeURIComponent(`Hi! I would like to see more details and photos of product ${productId}. Could you please share them?`);
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    }
+    
+    // Fixed navigation on scroll
+    window.addEventListener('scroll', function() {
+      const fixedNav = document.querySelector('.fixed-nav');
+      if (window.scrollY > 300) {
+        fixedNav.classList.add('visible');
+      } else {
+        fixedNav.classList.remove('visible');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Initialize language toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load saved language preference
+      const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+      switchLanguage(savedLang);
+      
+      // Add event listeners to language buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          switchLanguage(this.dataset.lang);
+        });
+      });
+      
+      // Add floating animation to product cards
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.product-card').forEach(card => {
+        observer.observe(card);
+      });
+    });
+    
+    // Add some interactive effects
+    document.addEventListener('mousemove', function(e) {
+      const cursor = document.querySelector('.cursor');
+      if (cursor) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      }
+    });
+  </script>
+
+</body>
+</html>
